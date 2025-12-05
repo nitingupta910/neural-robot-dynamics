@@ -29,14 +29,18 @@ Step 3: Install [PyTorch 2.5.1](https://pytorch.org/get-started/previous-version
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
 ```
 
-Step 4: Install Newton and Warp as instructed in [Newton Physics Repo](https://github.com/newton-physics/newton).
-
-Step 5: Install rl-games
+Step 4: Install Newton and Warp. Due to the rapid API evolution of [Newton](https://github.com/newton-physics/newton), the current preview version of code works with a previous version of Newton. Use the command below for Newton and Warp installation.
 ```
-pip install rl-games
+python -m pip install mujoco --pre -f https://py.mujoco.org/
+python -m pip install warp-lang --pre -U -f https://pypi.nvidia.com/warp-lang/
+python -m pip install git+https://github.com/google-deepmind/mujoco_warp.git@main
+python -m pip install git+https://github.com/newton-physics/newton@668dfb
 ```
 
-Step 6: Install other missing packages if encountered during running the scripts, e.g., `tqdm`, `pyglet`.
+Step 5: Install rl-games, as well as other missing packages if encountered during running the scripts, e.g., `tqdm`, `pyglet`.
+```
+pip install rl-games tqdm pyglet
+```
 
 ## Examples
 
