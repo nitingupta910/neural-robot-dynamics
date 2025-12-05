@@ -36,6 +36,8 @@ Step 5: Install rl-games
 pip install rl-games
 ```
 
+Step 6: Install other missing packages if encountered during running the scripts, e.g., `tqdm`, `pyglet`.
+
 ## Examples
 
 We released pretrained NeRD models of Cartpole and Ant (pretrained from Warp sim) to demonstrate the integration of the neural dynamics solver into Newton. 
