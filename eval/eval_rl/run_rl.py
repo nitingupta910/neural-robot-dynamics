@@ -170,7 +170,7 @@ def construct_env(env_specs, device, args):
         
     # Load neural model and neural_integrator_cfg if env_mode is "neural"
     if env_specs['env_mode'] == "neural":
-        neural_model, robot_name = torch.load(env_specs['model_path'], map_location=device)
+        neural_model, robot_name = torch.load(env_specs['model_path'], map_location=device, weights_only=False)
         neural_model.to(device)
 
         train_dir = os.path.abspath(
